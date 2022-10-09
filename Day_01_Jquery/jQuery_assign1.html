@@ -1,0 +1,23 @@
+<!-- 1.	Create an HTML5 page which contains a textbox. User enters an email id in the textbox. Create a <div> element below the textbox. Create a button titled Show Email. When the button is clicked, the entered email must be displayed inside the <div> element. 
+    a.	Using jQuery, attach a click event handler to the button. 
+    b.	Using jQuery, get the value of the textbox. 
+    c.	Using jQuery, display the email inside the <div> element.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    Email : <input type="text" id="demo" placeholder="Enter an email id"><br><br>
+    <button type="button" id="btn"> Show Email</button><br><br>
+    <div id='d' style="height: 40px; width:300px ;background-color:rgb(173, 206, 24); padding: 40px;"> </div>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                var v = $('#demo').val();
+                $('#d').text(v);
+            })
+        })
+    </script>
+</body>
+</html>
