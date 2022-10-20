@@ -1,0 +1,20 @@
+<!-- 5.	Create an HTML5 page. Create a <div> element with the id mydiv. Using the jQuery load() function, load the HTML5 page created in assignment 3 inside the <div> element.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $("button").click(function () {
+            $("#div1").load("assignment_03-Q_02.html",function(){
+                console.log('file loaded!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <button>Display File</button>
+</body>
+</html>
