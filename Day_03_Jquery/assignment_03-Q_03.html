@@ -1,0 +1,42 @@
+<!-- 3.	Create an HTML5 page which makes a jQuery AJAX GET request to the above-mentioned URL. Display the title of all completed todos in a listbox and all non-completed todos as a numeric bulleted list.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.get("https://jsonplaceholder.typicode.com/todos", function (data, status) {
+                    if (status == "success") {
+                        document.write("<h1>Completed todos</h1><select>");
+                        for (let a of data) {
+                            if (a.completed == true) {
+                                document.write("<option>" + a.title + "</option>");
+                            }
+                        }
+                        document.write("</select>");
+                        document.write("<h1>Incompleted todos</h1><ol>");
+                        for (let b of data) {
+                            if (b.completed != true) {
+                                document.write("<li>" + b.title + "</li>");
+                            }
+                        }
+                        document.write("</ol>");
+                    }
+                    else {
+                        alert("API call failed");
+                    }
+                });
+            });
+        });
+
+    </script>
+    <button>Make a API call</button>
+</body>
+
+</html>
