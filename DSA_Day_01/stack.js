@@ -25,7 +25,7 @@ class Stack {
         {
             str += this.items[i] + " ";
         }
-        console.log(str);
+        document.write(str);
     }
 }
 
