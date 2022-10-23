@@ -31,7 +31,7 @@ class Queue {
     {
         for(let i = 0; i < this.rear; i++)
         {
-            console.log(this.data[i]);
+            document.write(this.data[i]);
         }
     }
 }
