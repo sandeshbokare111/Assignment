@@ -42,7 +42,7 @@ class LinkedList {
         let currentNode = this.head;
 
         while(currentNode) {
-            console.log(currentNode.data);
+            document.write(currentNode.data);
             currentNode = currentNode.next;
         }
     }
